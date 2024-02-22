@@ -3,13 +3,15 @@
     ViewData["Title"] = "CreateGroup";
 }
 
+
+<link rel="stylesheet" href="/vendor/select2/css/select2.min.css">
 <link href="/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="/css/style.css" rel="stylesheet">
 
 
 
 <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-12">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
@@ -22,15 +24,15 @@
                                 <div class="row">
                                     <div class="mb-3 col-md-6">
                                         <label class="form-label">Select Sub-Group</label>
-                                        <input type="text" class="form-control" placeholder="Description">
+                                        <select id="single-select">
+                                            <option value="AL">Trial Balance</option>
+                                            <option value="WY">Balance Sheet</option>
+                                            <option value="WY">Profit and Loss Account</option>
+                                        </select>
                                     </div>
                                     <div class="mb-3 col-md-6">
                                         <label class="form-label">Group Name</label>
-                                        <input type="text" class="form-control" placeholder="Symbol">
-                                    </div>
-                                    <div class="mb-3 col-md-6">
-                                        <label class="form-label">Decimal Places</label>
-                                        <input type="number" class="form-control" placeholder="Decimal Places">
+                                        <input type="text" class="form-control" placeholder="Group Name">
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Save</button>
@@ -41,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-12">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
@@ -120,5 +122,7 @@
 <script src="/vendor/global/global.min.js"></script>
 
 <!-- Datatable -->
+<script src="/vendor/select2/js/select2.full.min.js"></script>
+<script src="/js/plugins-init/select2-init.js"></script>
 <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
 <script src="/js/plugins-init/datatables.init.js"></script>
